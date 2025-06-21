@@ -1,0 +1,51 @@
+---
+---
+<div id="cookie-consent" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 flex flex-col md:flex-row justify-between items-center z-50 transition-transform transform translate-y-full" style="display: none;">
+  <p class="text-sm mb-2 md:mb-0">
+    We use cookies to improve your experience. You can accept or decline.
+  </p>
+  <div class="flex space-x-2">
+    <button id="accept-cookies" class="bg-green-400 hover:bg-green-500 text-black font-bold py-2 px-4 rounded">
+      Accept
+    </button>
+    <button id="decline-cookies" class="bg-red-400 hover:bg-red-500 text-black font-bold py-2 px-4 rounded">
+      Decline
+    </button>
+  </div>
+</div>
+
+<script type="module" is:inline>
+  const consentBanner = document.getElementById('cookie-consent');
+  const acceptButton = document.getElementById('accept-cookies');
+  const declineButton = document.getElementById('decline-cookies');
+
+  if (!localStorage.getItem('cookie_consent')) {
+    consentBanner.style.display = 'flex';
+    setTimeout(() => {
+      consentBanner.classList.remove('translate-y-full');
+    }, 100);
+  } else {
+    document.dispatchEvent(new CustomEvent('cookie-consent', {
+      detail: localStorage.getItem('cookie_consent')
+    }));
+  }
+
+  acceptButton?.addEventListener('click', () => {
+    localStorage.setItem('cookie_consent', 'true');
+    hideBanner();
+    document.dispatchEvent(new CustomEvent('cookie-consent', { detail: 'true' }));
+  });
+
+  declineButton?.addEventListener('click', () => {
+    localStorage.setItem('cookie_consent', 'false');
+    hideBanner();
+    document.dispatchEvent(new CustomEvent('cookie-consent', { detail: 'false' }));
+  });
+
+  function hideBanner() {
+    consentBanner.classList.add('translate-y-full');
+    setTimeout(() => {
+      consentBanner.style.display = 'none';
+    }, 300);
+  }
+</script>

@@ -1,0 +1,49 @@
+[debug] [2025-06-17T06:30:36.309Z] ----------------------------------------------------------------------
+[debug] [2025-06-17T06:30:36.324Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2025-06-17T06:30:36.325Z] CLI Version:   14.7.0
+[debug] [2025-06-17T06:30:36.325Z] Platform:      win32
+[debug] [2025-06-17T06:30:36.325Z] Node Version:  v20.10.0
+[debug] [2025-06-17T06:30:36.326Z] Time:          Tue Jun 17 2025 08:30:36 GMT+0200 (Central European Summer Time)
+[debug] [2025-06-17T06:30:36.326Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-17T06:30:37.020Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-17T06:30:37.021Z] > authorizing via signed-in user (helmar81@gmail.com)
+[debug] [2025-06-17T06:30:37.022Z] [iam] checking project trading-vibes for permissions ["firebase.projects.get"]
+[debug] [2025-06-17T06:30:37.024Z] Checked if tokens are valid: true, expires at: 1750145234446
+[debug] [2025-06-17T06:30:37.025Z] Checked if tokens are valid: true, expires at: 1750145234446
+[debug] [2025-06-17T06:30:37.027Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/trading-vibes:testIamPermissions [none]
+[debug] [2025-06-17T06:30:37.028Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/trading-vibes:testIamPermissions x-goog-quota-user=projects/trading-vibes
+[debug] [2025-06-17T06:30:37.028Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/trading-vibes:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-06-17T06:30:37.297Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/trading-vibes:testIamPermissions 200
+[debug] [2025-06-17T06:30:37.298Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/trading-vibes:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-06-17T06:30:37.299Z] Checked if tokens are valid: true, expires at: 1750145234446
+[debug] [2025-06-17T06:30:37.300Z] Checked if tokens are valid: true, expires at: 1750145234446
+[debug] [2025-06-17T06:30:37.300Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/trading-vibes/services/cloudresourcemanager.googleapis.com [none]
+[debug] [2025-06-17T06:30:37.300Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/trading-vibes/services/cloudresourcemanager.googleapis.com x-goog-quota-user=projects/trading-vibes
+[debug] [2025-06-17T06:30:38.200Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/trading-vibes/services/cloudresourcemanager.googleapis.com 200
+[debug] [2025-06-17T06:30:38.201Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/trading-vibes/services/cloudresourcemanager.googleapis.com [omitted]
+[debug] [2025-06-17T06:30:38.201Z] Checked if tokens are valid: true, expires at: 1750145234446
+[debug] [2025-06-17T06:30:38.202Z] Checked if tokens are valid: true, expires at: 1750145234446
+[debug] [2025-06-17T06:30:38.202Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/trading-vibes [none]
+[debug] [2025-06-17T06:30:38.392Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/trading-vibes 200
+[debug] [2025-06-17T06:30:38.392Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/trading-vibes {"projectNumber":"67033792824","projectId":"trading-vibes","lifecycleState":"ACTIVE","name":"trading-vibes","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-06-16T20:31:18.379882Z"}
+[info] 
+[info] === Serving from 'C:\Users\User\Documents\ProjectStarter\trading-astro'...
+[info] 
+[debug] [2025-06-17T06:30:38.400Z] Checked if tokens are valid: true, expires at: 1750145234446
+[debug] [2025-06-17T06:30:38.400Z] Checked if tokens are valid: true, expires at: 1750145234446
+[debug] [2025-06-17T06:30:38.402Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/trading-vibes/sites 
+[debug] [2025-06-17T06:30:39.656Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/trading-vibes/sites 200
+[debug] [2025-06-17T06:30:39.657Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/trading-vibes/sites {"sites":[{"name":"projects/trading-vibes/sites/trading-vibes","defaultUrl":"https://trading-vibes.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-06-17T06:30:39.657Z] Checked if tokens are valid: true, expires at: 1750145234446
+[debug] [2025-06-17T06:30:39.657Z] Checked if tokens are valid: true, expires at: 1750145234446
+[debug] [2025-06-17T06:30:39.658Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/trading-vibes/webApps/-/config [none]
+[debug] [2025-06-17T06:30:40.522Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/trading-vibes/webApps/-/config 200
+[debug] [2025-06-17T06:30:40.522Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/trading-vibes/webApps/-/config {"projectId":"trading-vibes","appId":"1:67033792824:web:879f3ac1fb06bd7bbe81cd","storageBucket":"trading-vibes.firebasestorage.app","apiKey":"AIzaSyCLY0PH2eZOtY32ejmMI-u32zkHE8fzopg","authDomain":"trading-vibes.firebaseapp.com","messagingSenderId":"67033792824","measurementId":"G-XG15M2Q480"}
+[debug] [2025-06-17T06:30:40.533Z] Checked if tokens are valid: true, expires at: 1750145234446
+[debug] [2025-06-17T06:30:40.534Z] Checked if tokens are valid: true, expires at: 1750145234446
+[debug] [2025-06-17T06:30:40.535Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/trading-vibes [none]
+[debug] [2025-06-17T06:30:40.981Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/trading-vibes 200
+[debug] [2025-06-17T06:30:40.981Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/trading-vibes {"projectId":"trading-vibes","projectNumber":"67033792824","displayName":"trading-vibes","name":"projects/trading-vibes","resources":{"hostingSite":"trading-vibes"},"state":"ACTIVE","etag":"1_4cba3251-4e1d-41e3-b8b6-1e0d1c2cfb60"}
+[info] i  hosting[trading-vibes]: Serving hosting files from: dist {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mdist\u001b[22m"}}
+[info] +  hosting[trading-vibes]: Local server: http://localhost:5003 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5003\u001b[22m\u001b[24m"}}

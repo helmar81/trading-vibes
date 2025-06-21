@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "trading-vibes",
+    "staging": "trading-vibes",
+    "deploy": "trading-vibes"
+  },
+  "targets": {},
+  "etags": {}
+}

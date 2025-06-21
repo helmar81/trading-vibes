@@ -1,0 +1,138 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+---
+ <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<Layout
+  title="Get in touch"
+  description="About the author"
+  pubDate={new Date}
+  
+>
+  <main class="py-12 lg:py-20">
+    <article class="max-w-4xl mx-auto px-4">
+      <header class="mx-auto max-w-2xl text-center content">
+        
+ 
+ <body class="bg-white text-gray-500 font-body leading-normal personality-casual">
+        <section class="contact-section">
+      <div class="contact-intro">
+        
+        <p class="contact-description">
+          Fill out the form below and I will
+           get back to you as soon as possible.
+        </p>
+      </div>
+    
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+    
+        <input type="hidden" name="access_key" value="867d80d5-0fc9-422b-b90b-9f3f83ec6b50" />
+        <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+        <input type="hidden" name="from_name" value="My Website" />
+        <!-- More custom ization options available in the docs: https://docs.web3forms.com -->
+    
+        <div class="form-group-container">
+          <div class="form-group">
+            <label for="name" class="form-label">Name</label>
+            <input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
+          </div>
+          <div class="form-group">
+            <label for="phone" class="form-label">Phone</label>
+            <input id="phone" name="phone" class="form-input" placeholder="+1 (234) 56789" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
+          </div>
+        </div>
+        <button class="form-submit" type="submit">Send Message</button>
+      </form>
+
+       </section>
+
+       <style>
+
+.contact-section {
+  width: 100%;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3rem 1rem;
+}
+
+.contact-intro > * + * {
+  margin-top: 1rem;
+}
+
+.contact-title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+
+.contact-description {
+  color: rgb(107 114 128);
+}
+
+.form-group-container {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea {
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.form-input::placeholder,
+.form-textarea:focus-visible {
+  color: #6b7280;
+}
+
+.form-input:focus-visible,
+.form-textarea:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.form-textarea {
+  min-height: 120px;
+}
+
+.form-submit {
+  width: 100%;
+  margin-top: 1.2rem;
+  background-color: #3124ca;
+  color: #fff;
+  padding: 13px 5px;
+  border-radius: 0.375rem;
+}
+
+    </style>
+    </Layout>
+
+  </body>
+</html>
+
+    

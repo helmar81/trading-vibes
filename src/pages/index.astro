@@ -1,0 +1,41 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import CookieConsent from '../components/CookieConsent.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<link href="/src/styles.css" rel="stylesheet">
+	</head>
+	<body>
+		<Header />
+		
+  <main class="container mx-auto px-4 py-8 md:px-6 lg:px-8">
+
+    {/* Hero Section */}
+    <section class="text-center py-16 md:py-24 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg shadow-xl mb-12">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">
+        Welcome to Your Trading Hub
+      </h1>
+      <p class="text-lg sm:text-xl md:text-2xl mb-8 opacity-90 animate-fade-in delay-200">
+        Analyze your trades, refine your strategy, and explore market insights.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in delay-400">
+        <a href="/trigger" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold shadow-md transition transform hover:scale-105">
+          Analyze Trades
+        </a>
+        <a href="/blog" class="border border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3 rounded-full text-lg font-semibold shadow-md transition transform hover:scale-105">
+          Read My Blog
+        </a>
+      </div>
+    </section>
+
+     <CookieConsent /> 
+		<Footer />
+	</body>
+</html>

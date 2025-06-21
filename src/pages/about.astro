@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<Layout
+  title="About Me"
+  description="About the author"
+  pubDate={new Date('August 08 2021')}
+  heroImage="/global.webp"
+>
+  <main class="py-12 lg:py-20">
+    <article class="max-w-4xl mx-auto px-4">
+      <header class="mx-auto max-w-3xl text-center content">
+        
+
+       
+
+        <style lang="css">
+          [astro-icon] {
+            color: blue;
+            /* OR */
+            fill: blue;
+          }
+        </style>
+
+        <p class="text-2xl my-9 text-justify antialiased aspect-auto">
+          As a Level 3 Support Associate at Amazon, I expertly manage complex and escalated issues for premium sellers. Outside of work, I'm an avid technologist, particularly interested in Astro.js for app development, 
+          and a seasoned traveler with experience in 72 countries, bringing a global perspective to my work. I consistently seek new challenges and opportunities for growth, both professionally and personally
+        </p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/_5dDrGtW7Wk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <ul>
+        </ul>
+      </header>
+    </article>
+  </main>
+</Layout>
