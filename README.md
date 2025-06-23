@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Astro Starter Kit: Blog
 
 ```sh
@@ -66,3 +67,7 @@ Check out [our documentation](https://docs.astro.build) or jump into our [Discor
 ## Credit
 
 This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+=======
+# trading-vibes
+Analyze your trades, refine your strategy, and explore market insights.
+>>>>>>> 6e10c47642c978f826fc08acd25e60e61abb4a65

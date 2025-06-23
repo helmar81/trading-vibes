@@ -108,8 +108,17 @@ const App = ({ tradeProfits, tradePoints }) => {
       return (
           <div className="flex justify-center items-center h-48">
               <div className="text-center text-gray-500 text-lg">
-                  Upload your CSV file to view trade analysis.
-              </div>
+                 <h4> Upload your CSV file to view trade analysis.</h4>
+
+               <p>
+                 All processing happens locally in your browser.
+               </p>
+               <p>
+                 No data is stored or sent to any server.
+               </p>
+          </div>
+
+
           </div>
       );
   }

@@ -1,7 +1,7 @@
 {
   "name": "Trading Vibes",
-  "short_name": "TradingVibes",
-  "description": "Live trading signals, insights, and strategies.",
+  "short_name": "Trading Hub",
+  "description": "trading signals, insights, and strategies.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0d0d0d",
