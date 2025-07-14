@@ -116,9 +116,8 @@ const App = ({ tradeProfits, tradePoints }) => {
                <p>
                  No data is stored or sent to any server.
                </p>
-          </div>
 
-
+              </div>
           </div>
       );
   }
@@ -208,6 +207,8 @@ const App = ({ tradeProfits, tradePoints }) => {
                 </>
             ) : (
                 <div className="text-center text-gray-500">No points data available to display.</div>
+
+                
             )}
         </div>
     </div>

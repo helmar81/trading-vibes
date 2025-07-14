@@ -36,10 +36,12 @@ const PivotPointCalculator = () => {
     }
   }, [high, low, close]); // Recalculate whenever H, L, or C inputs change
 
+<div class="text-3xl font-bold text-center break-words w-full max-w-sm mx-auto"></div>
+
   return (
     <div className="min-h-screen md:max-xl:flex sm:max-2xl bg-gradient-to-br from-purple-50 to-indigo-50 p-8 font-inter text-gray-900 flex justify-center items-start">
       <div className="w-full max-w-2xl bg-white rounded-xl shadow-2xl p-8 space-y-8">
-        <h1 className="text-4xl font-extrabold text-center text-indigo-700 mb-8">
+        <h1 className="text-3xl font-bold text-center break-words w-full max-w-sm mx-auto text-indigo-700 mb-8">
           Daily Pivot Point Calculator
         </h1>
 
