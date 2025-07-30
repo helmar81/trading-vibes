@@ -14,13 +14,33 @@
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.4.0",
     "@firebase/analytics": "^0.10.16",
-    "@tailwindcss/vite": "^4.1.10",
+    "@tailwindcss/postcss": "^4.1.11",
+    "@tailwindcss/vite": "^4.1.11",
     "astro": "^5.8.0",
     "dayjs": "^1.11.13",
     "firebase": "^11.10.0",
     "papaparse": "^5.5.3",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "tailwindcss": "^4.1.10"
-  }
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@astrojs/partytown": "^2.1.4",
+    "@tailwindcss/typography": "^0.5.16",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11"
+  },
+  "description": "<<<<<<< HEAD\r # Astro Starter Kit: Blog",
+  "main": "tailwind.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helmar81/trading-vibes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/helmar81/trading-vibes/issues"
+  },
+  "homepage": "https://github.com/helmar81/trading-vibes#readme"
 }

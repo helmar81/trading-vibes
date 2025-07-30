@@ -1,6 +1,7 @@
+
 import React, { useState } from 'react';
 import Papa from 'papaparse';
-import TradeAnalysis from './TradeAnalysis.jsx'; // Import the TradeAnalysis component
+import TradeAnalysis from './TradeAnalysis.jsx';
 
 const CsvUploader = () => {
   const [tradeProfits, setTradeProfits] = useState(null);
@@ -22,14 +23,14 @@ const CsvUploader = () => {
 
     setFileName(file.name);
     setIsLoading(true);
-    setError(''); // Clear previous errors
+    setError('');
 
     const reader = new FileReader();
 
     reader.onload = ({ target }) => {
       Papa.parse(target.result, {
-        header: true,      // Treat the first row as headers
-        dynamicTyping: true, // Attempt to convert numbers and booleans
+        header: true,
+        dynamicTyping: true,
         skipEmptyLines: true,
         complete: (results) => {
           setIsLoading(false);
@@ -41,8 +42,6 @@ const CsvUploader = () => {
           }
 
           const data = results.data;
-
-          // Check if 'profit' and 'points' columns exist
           if (!data.some(row => 'profit' in row) || !data.some(row => 'points' in row)) {
             setError("CSV must contain 'profit' and 'points' columns.");
             setTradeProfits(null);
@@ -50,13 +49,8 @@ const CsvUploader = () => {
             return;
           }
 
-          const profits = data
-            .map(row => row.profit)
-            .filter(value => typeof value === 'number' && !isNaN(value)); // Ensure it's a number
-
-          const points = data
-            .map(row => row.points)
-            .filter(value => typeof value === 'number' && !isNaN(value)); // Ensure it's a number
+          const profits = data.map(row => row.profit).filter(value => typeof value === 'number' && !isNaN(value));
+          const points = data.map(row => row.points).filter(value => typeof value === 'number' && !isNaN(value));
 
           if (profits.length === 0 || points.length === 0) {
             setError("No valid 'profit' or 'points' data found after parsing.");
@@ -88,9 +82,9 @@ const CsvUploader = () => {
   };
 
   return (
-    <div className="w-full">
-      <div className="bg-purple-100 p-6 rounded-lg shadow-inner border border-purple-300 mb-8 text-center">
-        <h2 className="text-2xl font-bold text-purple-800 mb-4">Upload Your Orders CSV</h2>
+    <div className="w-full px-4 sm:px-6 lg:px-8">
+      <div className="bg-purple-100 p-6 sm:p-8 rounded-lg shadow-inner border border-purple-300 mb-8 text-center">
+        <h2 className="text-xl sm:text-2xl font-bold text-purple-800 mb-4">Upload Your Orders CSV</h2>
         <input
           type="file"
           id="csv-upload"
@@ -103,18 +97,17 @@ const CsvUploader = () => {
             file:bg-purple-50 file:text-purple-700
             hover:file:bg-purple-100 cursor-pointer"
         />
-        {fileName && <p className="mt-2 text-sm text-gray-600">Selected file: <span className="font-medium">{fileName}</span></p>}
+        {fileName && <p className="mt-2 text-sm text-gray-600">Selected file: <span className="font-medium break-words">{fileName}</span></p>}
         {isLoading && <p className="mt-2 text-sm text-blue-600">Loading and parsing data...</p>}
         {error && <p className="mt-2 text-sm text-red-600">{error}</p>}
       </div>
 
-      {/* Render TradeAnalysis only if data is loaded or if we are showing the initial state */}
       {tradeProfits !== null && tradePoints !== null && (
         <TradeAnalysis tradeProfits={tradeProfits} tradePoints={tradePoints} />
       )}
-      {/* If no file uploaded yet, or error, TradeAnalysis will show its 'upload prompt' */}
+
       {(tradeProfits === null && tradePoints === null && !error && !isLoading) && (
-           <TradeAnalysis tradeProfits={null} tradePoints={null} />
+        <TradeAnalysis tradeProfits={null} tradePoints={null} />
       )}
     </div>
   );

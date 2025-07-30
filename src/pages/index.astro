@@ -7,19 +7,16 @@ import CookieConsent from '../components/CookieConsent.astro';
 ---
 
 <!doctype html>
+<meta charset="UTF-8" />
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 
-    <meta property="og:title" content="Trading Hub  Built with ❤️ by Helmar Baechle." /> 
-		<meta property="og:description" content="Analyze your trades, refine your strategy, and explore market insights." /> 
-		<meta property="og:image" content="https://trading-vibes.web.app/hub.png" /> 
-		<meta property="og:url" content="https://trading-vibes.web.app/" /> 
-		<meta property="og:type" content="website" /> <meta name="twitter:card" content="summary_large_image" /> 
-		<meta name="twitter:title" content="Trading Hub" /> 
-		<meta name="twitter:description" content="Analyze your trades, refine your strategy, and explore market insights." /> 
-		<meta name="twitter:image" content="https://trading-vibes.web.app/hub.png" />
+   
 		<link href="/src/styles.css" rel="stylesheet">
+
+  
+    
 	</head>
 	<body>
 		<Header />
@@ -29,20 +26,73 @@ import CookieConsent from '../components/CookieConsent.astro';
     {/* Hero Section */}
     <section class="text-center py-16 md:py-24 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg shadow-xl mb-12">
       <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4  motion-safe:animate-fadeIn">
-        Welcome to Your Trading Hub
+        Unlock Your Trading Potential with Trading Vibes
       </h1>
       <p class="text-lg sm:text-xl md:text-2xl mb-8 opacity-90 animate-fade-in delay-200">
         Analyze your trades, refine your strategy, and explore market insights.
       </p>
       <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in delay-400">
         <a href="/trigger" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold shadow-md transition transform hover:scale-105">
-          Analyze Trades
+          Explore Trading Tools
         </a>
         <a href="/blog" class="border border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3 rounded-full text-lg font-semibold shadow-md transition transform hover:scale-105">
           Read My Blog
         </a>
       </div>
     </section>
+
+    <div class="max-w-md mx-auto bg-white rounded-xl shadow-lg overflow-hidden md:max-w-2xl my-8">
+    <div class="md:flex">
+        <div class="md:flex-shrink-0">
+            </div>
+        <div class="p-8">
+            <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">The Reality of Day Trading</div>
+            <h1 class="block mt-1 text-2xl leading-tight font-medium text-black hover:underline">It's Not a Get-Rich-Quick Scheme</h1>
+            <p class="mt-2 text-gray-500 text-lg">
+                Day trading is often misrepresented as a fast track to wealth, but that couldn't be further from the truth. It's crucial to understand that it **demands substantial time, effort, and unwavering discipline**. There's no guarantee of success, and the inherent risk of **losing money is always present**.
+            </p>
+
+            <div class="mt-6">
+                <h3 class="text-xl font-semibold text-gray-700">What Day Trading Truly Demands:</h3>
+                <ul class="list-disc list-inside mt-3 space-y-2 text-gray-600">
+                    <li>
+                        **Extensive Knowledge & Continuous Learning:** Deep understanding of markets, analysis, and economics.
+                    </li>
+                    <li>
+                        **A Robust Trading Strategy:** Clear entry/exit points, position sizing, and risk management are essential.
+                    </li>
+                    <li>
+                        **Ironclad Discipline & Emotional Control:** Sticking to your plan, even in volatility, is key.
+                    </li>
+                    <li>
+                        **Effective Risk Management:** Protecting your capital with strict stop-loss orders.
+                    </li>
+                    <li>
+                        **Adequate Capital:** Sufficient funds to withstand drawdowns and make meaningful gains.
+                    </li>
+                    <li>
+                        **Psychological Resilience:** Maintaining a healthy mindset through wins and losses.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mt-6 border-t border-gray-200 pt-4">
+                <p class="text-gray-500 text-base">
+                    Before you even consider venturing into day trading, you must **carefully assess your personal financial situation and your tolerance for risk**. If you're still considering it, start with **thorough education** and perhaps **paper trading** (simulated trading with virtual money) to test strategies without real financial risk. Building consistency takes time, often months or even years.
+                </p>
+                <div class="mt-4 text-right">
+                    <a href="/blog" class="text-indigo-600 hover:text-indigo-800 font-semibold">Learn More About Risk & Education &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+      <section class="mb-10">
+        <h2 class="text-2xl font-bold mb-2 text-center">🎥 S&P 500 Future Trading</h2>
+       <div class="rounded-xl overflow-hidden shadow-md aspect-video mx-auto max-w-3xl"> <video class="w-full h-full" controls> <source src="/videoFutures.mp4" type="video/mp4" /> Your browser does not support the video tag. </video> </div>
+      </section>
+
 
      <CookieConsent /> 
 		<Footer />

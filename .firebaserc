@@ -2,7 +2,8 @@
   "projects": {
     "default": "trading-vibes",
     "staging": "trading-vibes",
-    "deploy": "trading-vibes"
+    "deploy": "trading-vibes",
+    "update": "trading-vibes"
   },
   "targets": {},
   "etags": {}

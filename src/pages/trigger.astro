@@ -1,36 +1,27 @@
 ---
-import PivotPointCalculator from '../components/PivotPointCalculator.jsx';
+import PivotPointCalculator from '../components/PivotPointCalculatorImpl.jsx';
 import Layout from '../layouts/BlogPost.astro';
 ---
 
 <Layout
   title="Trigger"
-  description="calculate Long and Short Trigger"
-  pubDate={new Date}
-  
+  description="Calculate Long and Short Trigger"
+  pubDate={new Date()}
 >
-  <main class="py-12 lg:py-20 ">   
+  <main class="py-12 lg:py-20 px-4">
+    <section class="max-w-4xl mx-auto text-center mb-12">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-gray-800">
+        Daily Pivot Point Calculator
+      </h1>
+      <p class="mt-4 text-base sm:text-lg text-gray-600">
+        Calculate your long and short trigger levels with precision.
+      </p>
+    </section>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-  {/* ... */}
-
-    <article class="max-w-4xl mx-auto px-4">
+    <section class="max-w-2xl mx-auto">
+      <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+        <PivotPointCalculator client:load />
       </div>
-      <header class="mx-auto max-w-3xl text-center content"></header>
-
-
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Daily Pivot Point Calculator</title>
-  </head>
-  <body>
-    <PivotPointCalculator client:load />
-    
-    </Layout>
-  </body>
-</html>
-
+    </section>
+  </main>
+</Layout>
